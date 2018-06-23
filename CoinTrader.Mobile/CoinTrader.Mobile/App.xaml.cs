@@ -8,12 +8,17 @@ namespace CoinTrader.Mobile
 {
 	public partial class App : Application
 	{
+
 		public App ()
 		{
 			InitializeComponent();
 
 			MainPage = new MainPage();
 		}
+        public static void ChangePage(ContentPage page)
+        {
+            MainPage = page;
+        }
 
 		protected override void OnStart ()
 		{

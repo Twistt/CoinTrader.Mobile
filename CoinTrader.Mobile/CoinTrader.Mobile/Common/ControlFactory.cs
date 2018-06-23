@@ -45,7 +45,6 @@ namespace CoinTrader.Mobile.Common
                             Text = pageContent.TitleText,
                             HorizontalOptions = LayoutOptions.EndAndExpand,
                             HorizontalTextAlignment = TextAlignment.End,
-                            XAlign = TextAlignment.End,
                             TextColor = Color.MediumPurple
                         }
                     }

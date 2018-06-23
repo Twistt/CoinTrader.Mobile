@@ -9,26 +9,41 @@ namespace CoinTrader.Mobile.Pages
 {
     public class MainPage: ContentPage
     {
+        private LoginVM Login = new LoginVM();
         public MainPage() {
             Content = ControlFactory.PageTemplate(new PageContentVM() { Content = LoginBox(), TitleText= "Login" });
         }
         
         private StackLayout LoginBox()
         {
-            var loginBoxes = new AbsoluteLayout() {
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
-                VerticalOptions = LayoutOptions.CenterAndExpand,
-
-
+            var usernameEntry = new Entry { MaxLength = 25, Placeholder = "User Name" };
+            usernameEntry.TextChanged += (o, e) =>
+            {
+                Login.UserName = ((Entry)o).Text;
+            };
+            var passwordEnty = new Entry { MaxLength = 25, Placeholder = "Password", IsPassword = true };
+            passwordEnty.TextChanged += (o, e) =>
+            {
+                Login.PassWord = ((Entry)o).Text;
             };
             var loginFrame = new Frame()
             {
                 BorderColor = Color.Purple,
-                //This needs a control object (not a collection)
-                Content = new Label() { Text = "We are in a frame?", HorizontalTextAlignment = TextAlignment.Center }
+                //Frames need a control object (not a collection)
+                Content = new StackLayout() {
+                    Children = {
+                        usernameEntry,
+                        passwordEnty
+                    }
+                }
 
             };
             return new StackLayout { HorizontalOptions = LayoutOptions.CenterAndExpand, Children = { loginFrame } };
         }
+        private void DoLogin(object sender, EventArgs e)
+        {
+            //ToDo: Implement Login service
+        }
     }
+
 }
