@@ -17,8 +17,11 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Common\Application.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\ControlFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\Shared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ITemplateContent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Exchange.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\MainPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PageContentVM.cs" />
   </ItemGroup>
 </Project>
