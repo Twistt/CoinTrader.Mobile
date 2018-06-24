@@ -17,7 +17,7 @@ namespace CoinTrader.Mobile
 		}
         public static void ChangePage(ContentPage page)
         {
-            MainPage = page;
+            Application.Current.MainPage = page;
         }
 
 		protected override void OnStart ()

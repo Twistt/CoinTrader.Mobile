@@ -26,6 +26,9 @@ namespace CoinTrader.Mobile.Pages
             {
                 Login.PassWord = ((Entry)o).Text;
             };
+            var loginButton = new Button { Text = "login" };
+            loginButton.Clicked += DoLogin;
+
             var loginFrame = new Frame()
             {
                 BorderColor = Color.Purple,
@@ -33,7 +36,8 @@ namespace CoinTrader.Mobile.Pages
                 Content = new StackLayout() {
                     Children = {
                         usernameEntry,
-                        passwordEnty
+                        passwordEnty,
+                        loginButton
                     }
                 }
 
@@ -42,6 +46,7 @@ namespace CoinTrader.Mobile.Pages
         }
         private void DoLogin(object sender, EventArgs e)
         {
+            App.ChangePage(page: new Currencies());
             //ToDo: Implement Login service
         }
     }
