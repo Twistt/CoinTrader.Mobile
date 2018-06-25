@@ -14,13 +14,17 @@ namespace CoinTrader.Mobile.Pages
         public CurrenciesPage()
         {
             Content = ControlFactory.PageTemplate(new PageContentVM() { Content = GetCurrencyList(), TitleText = "Currencies" });
-            BackgroundImage = "mainbackground.jpg";
+            //BackgroundImage = "mainbackground.jpg";
         }
         public StackLayout GetCurrencyList()
         {
             BittrexExchange.GetBalances();
-            if (BittrexExchange.APIKeyisInvalid) App.ChangePage(new MainPage());
-
+            if (BittrexExchange.APIKeyisInvalid)
+            {
+                App.ChangePage(new MainPage());
+                return new StackLayout();
+            }
+            
             var tsection = new TableSection();
             foreach (var coin in Coin.AllCoins.Where(c=>c.Balance > 0))
             {

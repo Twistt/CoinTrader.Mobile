@@ -89,8 +89,7 @@ namespace CoinTrader.Mobile.Common
         internal static void GetBalances()
         {
             var json = AdvancedAuth("https://bittrex.com/api/v1.1/account/getbalances");
-
-            if (json == string.Empty) return;
+            if (json == null || json == string.Empty) return;
 
             JObject jObject = JObject.Parse(json);
             JToken jresult = jObject["result"];
@@ -299,6 +298,7 @@ namespace CoinTrader.Mobile.Common
             /// var ch = curl_init($uri);
             // curl_setopt($ch, CURLOPT_HTTPHEADER, array('apisign:'.$sign));
             if (requestResult.Contains("APIKEY_INVALID")) APIKeyisInvalid = true;
+            else APIKeyisInvalid = false;
             return null;
         }
     }

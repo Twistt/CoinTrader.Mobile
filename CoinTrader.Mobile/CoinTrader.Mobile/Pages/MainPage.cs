@@ -28,11 +28,12 @@ namespace CoinTrader.Mobile.Pages
             {
                 Login.PassWord = ((Entry)o).Text;
             };
-            var loginButton = new Button { Text = "Start Trading!", HorizontalOptions = LayoutOptions.FillAndExpand, WidthRequest = 120 };
+            var loginButton = new Button { Text = "Begin", HorizontalOptions = LayoutOptions.CenterAndExpand, WidthRequest = 90, BackgroundColor=Color.Black, TextColor = Color.FromHex("b0eaff") };
             loginButton.Clicked += DoLogin;
 
 
             var myImage = new Image { Source = FileImageSource.FromFile("selectionbox.png"), HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, Aspect = Aspect.AspectFill };
+            
 
             
             var loginbox = new AbsoluteLayout { Children = { myImage, new StackLayout { Children = { usernameEntry, passwordEnty, loginButton } } } };
@@ -45,11 +46,11 @@ namespace CoinTrader.Mobile.Pages
         private void DoLogin(object sender, EventArgs e)
         {
             //ToDo: Implement Login service
-            //Eventually we want to have them relog in so someone cant mess with someone elses trading account - but as this is a POC, it's not worth the extra work.
+            //Eventually we want to have them relog in with a password so someone cant mess with someone elses trading account - but as this is a POC, it's not worth the extra work.
 
             Common.Application.UserSettings = new Settings() { ApiKey = Login.UserName, ApiSecret = Login.PassWord };
             Common.Application.SaveSettings();
-            App.ChangePage(page: new CurrenciesPage());
+            App.ChangePage(new CurrenciesPage());
 
         }
     }
