@@ -12,8 +12,10 @@ namespace CoinTrader.Mobile
 		public App ()
 		{
 			InitializeComponent();
-
-			MainPage = new MainPage();
+            Common.Application.LoadSettings();
+            //If there is saved api data then we dont need to have them input it again. Just go to the currencies page.
+            if (!string.IsNullOrEmpty(Common.Application.UserSettings.ApiKey) && !string.IsNullOrEmpty(Common.Application.UserSettings.ApiSecret)) MainPage = new CurrenciesPage();
+            else MainPage = new MainPage();
 		}
         public static void ChangePage(ContentPage page)
         {

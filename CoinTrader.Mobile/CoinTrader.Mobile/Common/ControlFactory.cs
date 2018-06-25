@@ -10,46 +10,62 @@ namespace CoinTrader.Mobile.Common
     {
         public static Layout PageTemplate(ITemplateContent pageContent)
         {
+            //https://github.com/jasonCodesAway/XamJam/tree/master/XamJam.Screen
+            //var maxArea = size.Width * size.Height;
+            //var isGuaranteedMax = size.IsMaximum;
 
-            return new StackLayout()
+            return new AbsoluteLayout
             {
+                AnchorX=0,
+                AnchorY=0,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 Children = {
                     GenerateHeader(pageContent),
-                    pageContent.Content
-                    
+                    pageContent.Content,
+                    GenerateFooter()
+
                 }
 
             };
 
         }
-        public static Frame GenerateHeader(ITemplateContent pageContent) {
-            
-            return new Frame {
-                BackgroundColor = Color.LightGray,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                Padding = 5,
-                Content = new StackLayout
-                {
-                    Orientation = StackOrientation.Horizontal,
-                    Children = {
-                        new Label {
-                            FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-                            HorizontalOptions = LayoutOptions.Start,
-                            Text = "CoinTrader",
-                            TextColor = Color.Purple
-                        },
-                        new Label {
-                            FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-                            Text = pageContent.TitleText,
-                            HorizontalOptions = LayoutOptions.EndAndExpand,
-                            HorizontalTextAlignment = TextAlignment.End,
-                            TextColor = Color.MediumPurple
-                        }
-                    }
-                }
+        public static AbsoluteLayout GenerateHeader(ITemplateContent pageContent)
+        {
+            var myImage = new Image()
+            {
+                Source = FileImageSource.FromFile("headerbg.png")
             };
+            var layout = new AbsoluteLayout()
+            {
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                AnchorX = 0,
+                AnchorY = 0
+            };
+            //AbsoluteLayout.SetLayoutBounds(myImage, new Rectangle(0, 0, 1, 1));
+            myImage.HorizontalOptions = LayoutOptions.CenterAndExpand;
+
+            layout.Children.Add(myImage);
+            AbsoluteLayout.SetLayoutBounds(layout, new Rectangle(0, 0, 1, 1));
+            AbsoluteLayout.SetLayoutFlags(layout, AbsoluteLayoutFlags.All);
+            return layout;
+        }
+
+        public static AbsoluteLayout GenerateFooter()
+        {
+            var myImage = new Image()
+            {
+                Source = FileImageSource.FromFile("footerbg.png")
+            };
+            var layout = new AbsoluteLayout()
+            {
+                HorizontalOptions = LayoutOptions.CenterAndExpand,
+             };
+            myImage.HorizontalOptions = LayoutOptions.CenterAndExpand;
+
+            layout.Children.Add(myImage);
+            AbsoluteLayout.SetLayoutBounds(layout, new Rectangle(0, Shared.ScreenSize.Height-60, Shared.ScreenSize.Width, 160));
+            return layout;
         }
     }
 }

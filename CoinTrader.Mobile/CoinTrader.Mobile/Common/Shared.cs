@@ -1,4 +1,5 @@
 ﻿using CoinTrader.Mobile.Models;
+using Plugin.XamJam.Screen.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -8,6 +9,9 @@ namespace CoinTrader.Mobile.Common
 {
     public static class Shared
     {
+        public static ScreenSize ScreenSize = Plugin.XamJam.Screen.CrossScreen.Current.Size;
+
+
         public static async void GetData(string url = null, Exchange exchange = null)
         {
             using (WebClient webClient = new WebClient())

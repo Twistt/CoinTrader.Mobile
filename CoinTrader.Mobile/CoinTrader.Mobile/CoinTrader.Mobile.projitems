@@ -16,12 +16,19 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Common\Application.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\BittrexExchange.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\ControlFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\Encryption.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\Shared.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ITemplateContent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Coin.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Exchange.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Market.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Order.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Ticker.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\Currencies.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\CurrenciesPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\MainPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginVM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PageContentVM.cs" />
