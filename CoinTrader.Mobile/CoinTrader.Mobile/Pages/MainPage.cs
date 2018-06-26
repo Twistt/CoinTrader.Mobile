@@ -34,8 +34,6 @@ namespace CoinTrader.Mobile.Pages
 
             var myImage = new Image { Source = FileImageSource.FromFile("selectionbox.png"), HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, Aspect = Aspect.AspectFill };
             
-
-            
             var loginbox = new AbsoluteLayout { Children = { myImage, new StackLayout { Children = { usernameEntry, passwordEnty, loginButton } } } };
             AbsoluteLayout.SetLayoutBounds(myImage, new Rectangle(0, 0, 120, 160));
             AbsoluteLayout.SetLayoutBounds(loginbox, new Rectangle((Shared.ScreenSize.Width/2)-60, 100, 120, 160));
@@ -50,7 +48,7 @@ namespace CoinTrader.Mobile.Pages
 
             Common.Application.UserSettings = new Settings() { ApiKey = Login.UserName, ApiSecret = Login.PassWord };
             Common.Application.SaveSettings();
-            App.ChangePage(new CurrenciesPage());
+            App.ChangePage(new CurrenciesPage()); 
 
         }
     }

@@ -155,6 +155,132 @@
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.583944" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DOGE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ETH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\footerbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\FTC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\GIVE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\headerbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\LTC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mainbackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MYST.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\NAUT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\NXS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SALT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\selectionbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SOON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\STEEM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\STRAT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SWIFT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TRX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\UNO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\USDT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\VTC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\VTR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\XDN.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\XLM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\XMR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\XRP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\XST.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\XVC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\XVG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\XZC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ADA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BCC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BCPT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BCY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BITB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BTC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BTG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\buttonbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DGB.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\CoinTrader.Mobile\CoinTrader.Mobile.projitems" Label="Shared" />
 </Project>
