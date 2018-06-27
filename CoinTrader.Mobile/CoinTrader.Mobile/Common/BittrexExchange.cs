@@ -275,8 +275,9 @@ namespace CoinTrader.Mobile.Common
 
         public static string AdvancedAuth(string uri)
         {
-            var apikey = Application.UserSettings.ApiKey;
-            var apisecret = Application.UserSettings.ApiSecret;
+            //var apikey = Application.UserSettings.ApiKey;
+            //var apisecret = Application.UserSettings.ApiSecret;
+
             var nonce = DateTime.UtcNow;
             string web = "";
 
@@ -297,9 +298,14 @@ namespace CoinTrader.Mobile.Common
             //add header called "apisign:" with sign
             /// var ch = curl_init($uri);
             // curl_setopt($ch, CURLOPT_HTTPHEADER, array('apisign:'.$sign));
-            if (requestResult.Contains("APIKEY_INVALID")) APIKeyisInvalid = true;
+            if (requestResult.Contains("APIKEY_INVALID"))
+            {
+                APIKeyisInvalid = true;
+                return null;
+            }
             else APIKeyisInvalid = false;
-            return null;
+            return requestResult;
+            
         }
     }
 }

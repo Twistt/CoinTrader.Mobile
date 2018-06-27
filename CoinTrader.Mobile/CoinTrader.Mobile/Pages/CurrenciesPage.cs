@@ -14,7 +14,7 @@ namespace CoinTrader.Mobile.Pages
         public CurrenciesPage()
         {
             Content = ControlFactory.PageTemplate(new PageContentVM() { Content = GetCurrencyList(), TitleText = "Currencies" });
-            //BackgroundImage = "mainbackground.jpg";
+            BackgroundImage = "plainbg.png";
         }
         public StackLayout GetCurrencyList()
         {
@@ -28,13 +28,21 @@ namespace CoinTrader.Mobile.Pages
             var tsection = new TableSection();
             foreach (var coin in Coin.AllCoins.Where(c=>c.Balance > 0))
             {
-                tsection.Add(new ImageCell
+                var cell = new ImageCell
                 {
                     // Some differences with loading images in initial release.
                     ImageSource = ImageSource.FromFile(coin.Currency + ".png"),
                     Text = string.Format("{0} ({1})", coin.Currency, coin.Balance),
-                    Detail = coin.MarketName
-                });
+                    Detail = coin.MarketName,
+                    
+
+
+                };
+                cell.Tapped += (o, e) =>
+                {
+                    App.ChangePage(new CoinPage(coin));
+                };
+                tsection.Add(cell);
             }
             TableView tableView = new TableView
             {

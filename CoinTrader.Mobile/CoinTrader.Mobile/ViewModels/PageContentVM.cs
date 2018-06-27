@@ -9,6 +9,8 @@ namespace CoinTrader.Mobile.ViewModels
     public class PageContentVM : ITemplateContent
     {
         public string TitleText { get; set; }
-        public Layout Content { get; set; }
+        public View Content { get; set; }
+        public bool UseFooterCoinIcon { get; set; }
+        public string CoinIcon { get;  set; }
     }
 }

@@ -221,6 +221,12 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\buttonbg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\plainbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\coincallout.png" />
+  </ItemGroup>
   <Import Project="..\CoinTrader.Mobile\CoinTrader.Mobile.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
